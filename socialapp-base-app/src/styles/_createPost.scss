@@ -1,0 +1,65 @@
+.createPostPage {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    color: $black;
+    width: 35%;
+    position: absolute;
+    left: 35%;
+    @media (max-width: 768px) {
+        width: 90%;
+        left: 5%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 2.5rem;
+        width: 30rem;
+        font-size: 2rem;
+        font-family: "Lato", sans-serif;
+        @media (max-width: 768px) {
+            font-size: 1.6rem;
+            width: 25rem;
+        }
+    }
+    
+    textarea {
+        height: 5rem;
+        font-size: 1.6rem;
+        font-family: "Lato", sans-serif;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+    
+    .postText {
+        height: 30rem;
+        text-align: justify;
+        font-size: 1.6rem;
+        font-family: "Lato", sans-serif;
+        border-radius: 10px;
+        padding: 0.5rem;
+        @media (max-width: 768px) {
+            height: 25rem;
+        }
+    }
+    button {
+        margin-top: 1.5rem;
+        color: #7aa8ce;
+        background-color: lighten($white, 10%);
+        font-size: 1.6rem;
+        padding: 1rem;
+        border-radius: 300px;
+        border: none;
+        box-shadow: #65778652 0px 0px 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    
+}

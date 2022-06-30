@@ -1,0 +1,225 @@
+.postPage {
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    align-self: center;
+    min-height: 90vh;
+    max-height: 100vh;
+    border-radius: 1.5rem;
+    box-shadow: #657786 0px 3px 8px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    @media (max-width: 1024px) {
+        width: 90%;
+        left: 5%;
+        min-height: 90vh;
+        max-height: 90vh;
+        bottom: 5%;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    .username {
+        margin-top: 2.5rem;
+        font-size: 2rem;
+        font-style: italic;
+        display: flex;
+        .date {
+            display: flex;
+            flex-direction: column;
+            .created {
+                font-size: 1.6rem;
+                color: grey;
+                margin-left: 1rem;
+                margin-top: 0.325rem;
+                @media (max-width: 768px) {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                }
+                span {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+    .contentBody {
+        display: flex;
+        flex-direction: column;
+        height: 45rem;
+        overflow-y:scroll;
+        @media (max-width: 768px) and (max-height: 900px) {
+            height: 50vh;
+        }
+        @media (max-width: 768px) and (max-height: 768px) {
+            height: 40vh;
+        }
+        
+        &::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+        &::-webkit-scrollbar-track {
+            background: #65778652;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary-color;
+            border-radius: 2rem;
+            border: 0.1rem solid #65778652;
+        }
+        .title {
+            margin-top: 2.5rem;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            
+        }
+        .body {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            margin-right: 1.25rem;
+            line-height: 1.4;
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
+        }
+        img {
+            max-width: 100%;
+            max-height: 50rem;
+            width: auto;
+            height: auto;
+        }
+    }
+    
+}
+
+.deleteButton {
+    margin-top: 1.5rem;
+    background-color: lighten($white, 10%);
+    color: rgb(226, 53, 53);
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 300px;
+    margin-right: 1.5rem;
+    border: none;
+    box-shadow: #65778652 0px 0px 8px;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        padding: 0.75rem;   
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+.editButton {
+    margin-top: 1.5rem;
+    color: #7aa8ce;
+    background-color: lighten($white, 10%);
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 300px;
+    border: none;
+    box-shadow: #65778652 0px 0px 8px;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.commentSection {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+    .addCommentContainer {
+        display: flex;
+        input {
+            background-color: $white;
+            padding: 1rem;
+            border: 0.1rem solid $black;
+            border-radius: 1.5rem 0rem 0rem 1.5rem ;
+            width: 100%;
+            color: $black;
+            margin-bottom: 2.5rem;
+        }
+        button {
+            background-color: $white;
+            color: $black;
+            font-size: 1.4rem;
+            max-height: 3.75rem;
+            padding: 1rem;
+            border-radius: 0rem 1.5rem 1.5rem 0rem;
+            border: 0.1rem solid $black;
+        }
+    }
+    .listOfComments {
+        max-height: 10rem;
+        overflow-y:scroll;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) and (max-height: 900px) {
+            max-height: 10rem;
+        }
+        @media (max-width: 768px) and (max-height: 768px) {
+            max-height: 10rem;
+        }
+        
+        
+        &::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+        &::-webkit-scrollbar-track {
+            background: #65778652;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary-color;
+            border-radius: 2rem;
+            border: 0.1rem solid #65778652;
+        }
+        .comment {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            .commentBody {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .commentText {
+                    max-width: 90%;
+                }
+                .deleteComment {
+                    color: rgb(226, 53, 53);
+                    margin-right: 2.5rem;
+                }
+            }
+            .commentUsername {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                label {
+                    font-style: italic;
+                }
+                .created {
+                    font-size: 1.4rem;
+                    color: grey;
+                    margin-left: 0.5rem;
+                    @media (max-width: 768px) {
+                        font-size: 1.2rem;
+                    }
+                    span {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

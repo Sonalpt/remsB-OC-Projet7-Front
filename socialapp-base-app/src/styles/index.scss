@@ -1,0 +1,196 @@
+$primary-color: #15202B;
+$white: rgb(250, 245, 245);
+$black: rgba(0, 0, 0, 0.897);
+
+@import "./authentication";
+@import "./home";
+@import "./navbar";
+@import "./createPost";
+@import "./post";
+@import "./profile";
+@import "./pageNotFound";
+@import "./groupomania";
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: $white;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+body {
+    font-size: 1.8rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    background-color: $white;
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: #65778652;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+        border-radius: 2rem;
+        border: 0.1rem solid #65778652;
+    }
+}
+
+.App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.adminPage {
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 30%;
+    margin-top: 2.5rem;
+    @media (max-width: 768px) {
+        width: 100vw;
+        left: 45%;
+        
+    }
+    .adminTitle {
+        align-self: center;
+        text-align: center;
+        width: 1rem;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        li {
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            border: 0.1rem solid grey;
+            border-radius: 10px;
+            padding: 0.75rem;
+            width: 100%;
+            align-self: center;
+            box-shadow: #657786 0px 3px 8px;
+            @media (max-width: 768px) {
+                width: 80vw;
+            }
+            span {
+                margin-bottom: 1.25rem;
+            }
+            button {
+                margin-left: 1.5rem;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.editComment {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    width: 30vw;
+    height: 90vh;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    background-color: $white;
+    transform: translate(-50%, -50%);
+    box-shadow: #657786 0px 3px 8px;
+    border-radius: 10px;
+    bottom: 5%;
+    top: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+        min-height: 90vh;
+        max-height: 90vh;
+        bottom: 5%;
+        top: 50%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .editSection {
+            height: 30rem;
+            width: 100%;
+            font-size: 1.6rem;
+            font-family: "Lato", sans-serif;
+            border-radius: 10px;
+            padding: 0.5rem;
+        }
+        span {
+            align-self: center;
+            margin-top: 2.5rem;
+            position: absolute;
+            z-index: 3;
+            top: 2%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    input {
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 2.5rem;
+        width: 30rem;
+        height: 20rem;
+        font-size: 2rem;
+        font-family: "Lato", sans-serif;
+        @media (max-width: 768px) {
+            font-size: 1.6rem;
+            width: 25rem;
+        }
+    }
+    button {
+        margin-top: -15rem;
+    }
+}
+
+.unlikedBttn{
+    color: $black !important;
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+}
+.likedBttn {
+    color: darken($white, 20%) !important;
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+}

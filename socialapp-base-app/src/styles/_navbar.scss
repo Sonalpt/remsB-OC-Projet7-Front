@@ -1,0 +1,76 @@
+.navbar {
+    border-radius: 1.5rem;
+    // box-shadow: #657786 0px 3px 8px;
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 2.5rem;
+    height: 92.5vh;
+    align-items: center;
+    position: fixed;
+    left: 10%;
+    @media (max-width: 1024px) {
+        display: none;
+        visibility: hidden;
+    }
+    h2 {
+        font-style: italic;
+        margin-bottom: 5rem;
+    }
+    a {
+        margin-right: 2.5rem;
+        text-align: justify;
+    }
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    a {
+        margin-bottom: 2.5rem;
+        font-size: 2rem;
+        display: flex;
+        svg {
+            color: $black;
+        }
+        span {
+            margin-left: 2.5rem;
+            color: $black;
+            font-weight: lighter;
+        }
+    }
+    
+}
+
+.phoneNavbar {
+    display: flex;
+    border: 0.1rem solid rgba(255, 255, 255, 0.589);
+    border-radius: 1rem;
+    max-height: 5rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    background-color: darken($white , 30% );
+    opacity: 0.9;
+    z-index: 3;
+    width: 25rem;
+    @media (min-width: 1024px) {
+        display: none;
+        visibility: hidden;
+    }
+    a {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        svg {
+            color: $white;
+        }
+    }
+}
